@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTrack-Home</title> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />    <link rel="stylesheet" href="/styles/Login.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    a{
+        text-decoration: none;
+    }
+
+    h6{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .card-img-top{
+      width: 40%;
+      margin: auto;
+    }
+    
+  </style>
+    
+</head>
+<body>
+    <div class="initial1" style="display: flex; padding: 28px;"><img style="height: 45px;" src="images/Logo.png" alt="Logo"><p style="margin-left: 10px;"><b><a style="color: black;" href="/">GoTrack</a></b></p>
+    <div style="display: flex; margin-left: 32vw;">
+        <h6><a style="color: rgb(0, 0, 0);"  href="/"><b>Home</b></a></h6>
+        <h6><a style="color: rgb(0, 0, 0);" href="/"><b>About</b></a></h6>
+        <h6><a style="color: rgb(0, 0, 0);" href="/"><b>Features</b></a></h6>
+    </div>
+
+    
+
+    <button class="contact1" ><a style="color: white;" href="mailto: ishanhere24810@gmail.com">Contact Us</a></button>
+
+    </div>
+
+    <div style="text-align: center; background-color: black; color: white;"><p><b>Hello <%=Name%></b></p></div>
+    <div style="text-align: center; text-decoration: underline;"><h3>Active Travellers</h3></div>
+
+ <div class="row col-12" style="padding: 5px; margin: 30px;">
+    <% Travellers.forEach(function(traveller){ %>
+<a style="text-decoration: none; color: black;" href="/home_traveller/<%=traveller._id%>">
+        <div class="card col-6" style="position: relative;  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;">
+          <img src="images/th.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=traveller.name%></h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Travelling from <b><%=traveller.from1%></b></li>
+            <li class="list-group-item">Travelling to <b><%=traveller.to1%></b></li>
+            <li class="list-group-item">Travelling on <b><%=traveller.date1%></b></li>
+          </ul>
+          <div class="card-body">
+            <p>Rating: <b>4.6</b></p>
+            <!-- <a href="/Account/<%= traveller.adhar_card1%>" class="card-link">Select</a> -->
+          </div>
+      </div></a>
+      
+   <% }) %>
+      </div>
+      
+
+</body>
+</html>

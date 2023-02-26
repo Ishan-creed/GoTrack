@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotrack Customer</title>
+    <link rel="stylesheet" href="/styles/customer_info.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header header-desktop">
+      <div class="header-1">
+        <div class="logo"><img src="/images/logo.png" alt="" /></div>
+        <div class="title">Gotrack</div>
+      </div>
+      <div class="header-2">
+        <div class="home"><a style="color: black; text-decoration: none;" href="/">Home</a></div>
+        <div class="about"><a style="color: black; text-decoration: none;" href="/">About</a></div>
+        <div class="features"><a style="color: black; text-decoration: none;" href="/">Features</a></div>
+      </div>
+      <div class="contact_us_h">
+       <a href="mailto:ishanhere24810@gmail.com" style="color: white;"><button class="contact-us-btn">Contact Us</button></a>
+      </div>
+    </div>
+    <div class="header-mobile">
+      <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+            <div class="logo">
+              <div class="logo-mobile">
+                <img src="/images/logo.png" alt="" />
+              </div>
+              <div class="title"><a style="color: black; text-decoration: none;" href="/">Gotrack</a></div>
+            </div>
+            <div class="menu-items">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">Contact Us</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="customer-info">
+      <div class="leftside-customer">
+        <div class="customer-photo"></div>
+        <div class="customer-name"><%= Name %></div>
+        
+        <div class="customer-rating">
+          <div class="c-sucess">Rating</div>
+          <div class="c-rating">4.5/5</div>
+        </div>
+        <div class="customer-address">
+          <b>Address:</b><br><%= City %> , <%= Country %>
+        </div>
+      </div>
+      <div class="rightside-customer">
+        <div class="rightside-heading">
+            <div class="account-details ad-active">Account Detail</div>
+            <div class="security sc-active">Security</div>
+            <div class="tracking tk-active">Tracking</div>
+            <div class="shipping sh-active">Shipping</div>
+        </div>
+        <div class="rightside-description">
+            <div class="account-details-description active">
+                <div class="name"><b>Name: </b><%= Name %></div>
+                <div class="permanent-address"><b>Permanent Address: </b><%= City %> , <%= Country %></div>
+                <div class="city"><b>City: </b><%= City %></div>
+                <div class="state"><b>State: </b>Himachal Pradesh</div>
+                <div class="country"><b>Country: </b><%= Country %></div>
+                <div class="pincode"><b>Pin Code: </b>100001</div>
+                <div class="contact-no"><b>Contact No.: </b><%= Contact %></div>
+                <div class="email-id"><b>Email Id: </b><%=Email %></div>
+            </div>
+            <div class="security-description not-active">Testing stuff</div>
+            <div class="tracking-description not-active">
+                <div class="item-track-percentage">
+                    <div class="item-name">Shoes</div>
+                    <div class="track-percentage">60%</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="order-where">Order Reached at Waknaghat</div>
+                <div class="arrival-time">Order Arriving in 10 minutes</div>
+            </div>
+            <div class="shipping-description not-active">Shipping</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTrack-Login</title> 
+    
+    <link rel="stylesheet" href="/styles/Login.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+    var googleUser = {};
+    var startApp = function() {
+      gapi.load('auth2', function(){
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        auth2 = gapi.auth2.init({
+          client_id: '668507890063-khpsnofjaepbeao1lqmg1i04js9sjqdt.apps.googleusercontent.com',
+          cookiepolicy: 'single_host_origin',
+          // Request scopes in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+        attachSignin(document.getElementById('customBtn'));
+      });
+    };
+  
+    function attachSignin(element) {
+      console.log(element.id);
+      auth2.attachClickHandler(element, {},
+          function(googleUser) {
+            document.getElementById('name').innerText = "Signed in: " +
+                googleUser.getBasicProfile().getName();
+          }, function(error) {
+            alert(JSON.stringify(error, undefined, 2));
+          });
+    }
+    </script>
+    <style type="text/css">
+   
+   a{
+    text-decoration: none;
+   }
+
+      #customBtn {
+        display: inline-block;
+        background: white;
+        color: #444;
+        width: 190px;
+        border-radius: 5px;
+        border: thin solid #888;
+        box-shadow: 1px 1px 1px grey;
+        white-space: nowrap;
+      }
+      #customBtn:hover {
+        cursor: pointer;
+      }
+      span.label {
+        font-family: serif;
+        font-weight: normal;
+      }
+      span.icon {
+        background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        width: 42px;
+        height: 42px;
+      }
+      span.buttonText {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 42px;
+        padding-right: 42px;
+        font-size: 14px;
+        font-weight: bold;
+        /* Use the Roboto font that is loaded in the <head> */
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="initial1" style="display: flex; padding: 28px;"><img style="height: 45px;" src="images/Logo.png" alt="Logo"><p style="margin-left: 10px;"><b><a style="color: black;" href="/">GoTrack</a></b></p>
+    <div style="display: flex; margin-left: 30vw;">
+        <h3><b><a style="color: rgb(0, 0, 0);"  href="/">Home</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/">About</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/">Features</a></b></h3>
+    </div>
+
+    <button class="contact1" ><a style="color: white;" href="mailto: ishanhere24810@gmail.com">Contact Us</a></button>
+
+    </div>
+
+
+    <div class="container1" style="display: flex;">
+
+        <div class="left_container1">
+            <img src="/images/LoginImage.png" alt="">
+
+            <h3 style="margin-right: 25px;">Start A Journey With Us</h3>
+
+            <a style="color: black;" href="/SignUp"><button class="SignUp">SignUp</button></a>
+
+        </div>
+
+
+        <div class="right_container1">
+
+            <h1>Welcome!</h1>
+
+            <div class="auth" style="width: fit-content;"><form action="" method="post"></div>
+                <div class="input_style"><input type="email" name="Email" id="" placeholder="Email"></div>
+                <div class="input_style"><input type="password" name="Password" id="" placeholder="Password"></div>
+                <p style="font-size: small; margin-left: 140px; margin-top: 10px;">Forgot Password?</p>
+                <button type="submit" class="Login">Login</button>
+            </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <hr>
+            <br>
+            <br>
+            <div id="gSignInWrapper">
+                <div id="customBtn" class="customGPlusSignIn">
+                  <span class="icon"></span>
+                  <a style="color: black;" href="/auth/google"><span class="buttonText">Google</span></a>
+                </div>
+              </div>
+              <div id="name"></div>
+              <script>startApp();</script>
+        </div>
+
+    </div>
+
+</body>
+</html>

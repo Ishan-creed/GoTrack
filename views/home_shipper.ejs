@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTrack-Home</title> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />    <link rel="stylesheet" href="/styles/Login.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    a{
+        text-decoration: none;
+    }
+    
+    h6{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  </style>
+    
+</head>
+<body>
+    <div class="initial1" style="display: flex; padding: 28px;"><img style="height: 45px;" src="images/Logo.png" alt="Logo"><p style="margin-left: 10px;"><b><a style="color: black;" href="/">GoTrack</a></b></p>
+        <div style="display: flex; margin-left: 32vw;">
+            <h6><a style="color: rgb(0, 0, 0);"  href="/"><b>Home</b></a></h6>
+            <h6><a style="color: rgb(0, 0, 0);" href="/"><b>About</b></a></h6>
+            <h6><a style="color: rgb(0, 0, 0);" href="/"><b>Features</b></a></h6>
+        </div>
+    
+        
+    
+        <button class="contact1" ><a style="color: white;" href="mailto: ishanhere24810@gmail.com">Contact Us</a></button>
+    </div>
+
+    <div style="text-align: center; background-color: black;color: white;"><p><b>Hello <%=Name%></b></p></div>
+
+    <div style="text-align: center; text-decoration: underline;"><h3>Active Shipment Requests</h3></div>
+
+
+ <div class="row col-12" style="padding: 5px;padding-top: 40px; margin: 30px;">
+    <% Shippers.forEach(function(shipper){ %>
+
+   <a style="color: black; text-decoration: none;" href="/home_shipper/<%=shipper._id%>">
+        <div class="card col-6" style="position: relative; border-radius: 22px; box-shadow: 2px 2px 2px rgb(61, 61, 61);">
+            <img src="images/th.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Requester Name: <b><%=shipper.your_name%></b></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Travelling from <b><%=shipper.pickup%></b></li>
+              <li class="list-group-item">Travelling to <b><%=shipper.drop%></b></li>
+              <li class="list-group-item">Travelling on <b><%=shipper.date%></b></li>
+              <li class="list-group-item">Paying Amount:  <b><%=shipper.amount%></b></li>
+            </ul>
+            <div class="card-body">
+              <p>Cargo: <b><%=shipper.package_name%></b></p>
+              <p>Cargo-Type: <b><%=shipper.package_type%></b></p>
+
+            </div>
+        </div></a>
+   <% }) %>
+      </div>
+      
+
+</body>
+</html>

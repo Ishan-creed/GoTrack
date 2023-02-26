@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTrack-Traveller</title> 
+    
+    <link rel="stylesheet" href="/styles/Login.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    a{
+        text-decoration: none;
+    }
+  </style>
+    
+</head>
+<body>
+    <div class="initial1" style="display: flex; padding: 28px;"><img style="height: 45px;" src="images/Logo.png" alt="Logo"><p style="margin-left: 10px;"><b><a style="color: black;" href="/">GoTrack-<%=Name%></a></b></p>
+    <div style="display: flex; margin-left: 4vw;">
+        <h3><b><a style="color: rgb(0, 0, 0);"  href="/">Home</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/">About</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/">Features</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/Account">Account</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/home_shipper">Shipments</a></b></h3>
+        <h3><b><a style="color: rgb(0, 0, 0);" href="/home_traveller">Travellers</a></b></h3>
+
+    </div>
+
+    <button class="contact1" ><a style="color: white;" href="mailto: ishanhere24810@gmail.com">Contact Us</a></button>
+
+    </div>
+
+
+    <div class="container1" style="display: flex;">
+
+        <div class="left_container1">
+            
+            <img src="/images/LoginImage.png" alt="">
+
+            <h3 style="margin-right: 25px;">Start A Journey With Us !</h3>
+
+            <a style="color: black;" href="/Delivery"><button class="SignUp">Shipment Details</button></a>
+
+        </div>
+
+
+        <div class="right_container1">
+
+            <h4 style="text-decoration: none; background-color: black;color: white; padding: 20px;">Fill the details for your Journey</h4>
+
+            <div class="auth" style="width: fit-content;"><form action="" method="post""></div>
+                <div class="input_style"><input type="text" name="from" id="" placeholder="Pickup Location"></div>
+                <div class="input_style"><input type="text" name="to" id="" placeholder="Drop Location"></div>
+                <div class="input_style"><input type="date" name="travel_date" id="" placeholder="Date for Travel"></div>
+                <div class="input_style"><input type="number" name="adhar" id="" placeholder="Adhar Card No"></div>
+                <button type="submit" class="Login">Submit</button>
+            </form>
+
+            <hr>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
